@@ -12,7 +12,8 @@ def prettify(self, encoding=None, formatter="minimal", indent_width=4):
 BeautifulSoup.prettify = prettify
 
 LOCAL_PREFIX: str = os.path.dirname(os.path.realpath(__file__)) + "\\"
-ARTICLES_PREFIX: str = '\\'.join(LOCAL_PREFIX.split("\\")[:-2]) + "\\website\\articles\\"
+WEBSITE_PREFIX: str = '\\'.join(LOCAL_PREFIX.split("\\")[:-2]) + "\\website\\"
+ARTICLES_PREFIX: str = WEBSITE_PREFIX + "articles\\"
 
 def md_to_html(s: str) -> str:
     s += "\n"
@@ -128,6 +129,13 @@ def push(title: str, html: str, *args: str) -> None:
         
     for path in args:
         shutil.copy(path, target)
+        
+    if os.path.exists(WEBSITE_PREFIX + "articles.txt"):
+        with open(WEBSITE_PREFIX + "articles.txt", "a") as articles:
+            articles.write(f"\n{title}")
+    else:
+        with open(WEBSITE_PREFIX + "articles.txt", "w") as articles:
+            articles.write(title)
 
 def main() -> int:
     if len(sys.argv) != 4:
