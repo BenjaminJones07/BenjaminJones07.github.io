@@ -37,8 +37,8 @@
                             out some of our latest content! Below is our most recent article!
                         </p>
 
-                        <a href="articles/Fibonacci/index.html" id="new-link">
-                            <img src="articles/Fibonacci/cover.png" class="img-thumbnail" id="new-img">
+                        <a id="new-link">
+                            <img class="img-thumbnail" id="new-img">
                         </a>
 
                         <!-- <figure class="figure">
@@ -70,11 +70,12 @@
             if (xmlhttp.status == 200) {
                 var result = xmlhttp.responseText;
                 var resList = result.split("\n");
-                var recent = resList[resList.length - 1]
+                var recent = resList[resList.length - 1];
 
-                document.querySelector("#new-link").attributes.href = "articles/" + recent
+                document.querySelector("#new-link").attributes.href = "articles/" + recent;
+                document.querySelector("#new-img").attributes.src = "articles/" + recent + "/cover.png";
             } else {
-                alert("Cannot get recent articles!")
+                alert("Cannot get recent articles!");
             }
         </script>
     </body>
