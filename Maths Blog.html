@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset = "utf-8">
+<!-- saved from url=(0043)https://benjaminjones07.github.io/website/# -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <link href="./Maths Blog_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
         <title>Maths Blog</title>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Maths Blog</a>
+                <a class="navbar-brand" href="https://benjaminjones07.github.io/website/#">Maths Blog</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        <a class="nav-link" href="about.html">About us</a>
-                        <a class="nav-link" href="articles.html">Articles</a>
+                        <a class="nav-link active" aria-current="page" href="https://benjaminjones07.github.io/website/#">Home</a>
+                        <a class="nav-link" href="https://benjaminjones07.github.io/website/about.html">About us</a>
+                        <a class="nav-link" href="https://benjaminjones07.github.io/website/articles.html">Articles</a>
                     </div>
                 </div>
             </div>
         </nav>
         <div class="container" style="margin-top: 10px">
             <div class="clearfix">
-                <img src="images/introimage.png" alt="Images of famous mathematician" class="col-md-4 float-md-end mb-3 ms-md-3">
+                <img src="./Maths Blog_files/introimage.png" alt="Images of famous mathematician" class="col-md-4 float-md-end mb-3 ms-md-3">
                 <div class="wrapper col-md-6">
                     <article class="intro">
                         <h1>
@@ -37,8 +37,8 @@
                             out some of our latest content! Below is our most recent article!
                         </p>
 
-                        <a href="articles/Fibonacci/index.html" id="new-link">
-                            <img src="articles/Fibonacci/cover.png" class="img-thumbnail" id="new-img">
+                        <a href="https://benjaminjones07.github.io/website/articles/Fibonacci/index.html">
+                            <img src="./Maths Blog_files/cover.png" class="img-thumbnail">
                         </a>
 
                         <!-- <figure class="figure">
@@ -60,22 +60,7 @@
                 </div>
             </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>     
-        <script>
-            var xmlhttp = new XMLHttpRequest();
+        <script src="./Maths Blog_files/bootstrap.bundle.min.js.download" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>     
+    
 
-            xmlhttp.open("GET", "articles.txt", false);
-            xmlhttp.send();
-
-            if (xmlhttp.status == 200) {
-                var result = xmlhttp.responseText;
-                var resList = result.split("\n");
-                var recent = resList[resList.length - 1]
-
-                document.querySelector("#new-link").attributes.href = "articles/" + recent
-            } else {
-                alert("Cannot get recent articles!")
-            }
-        </script>
-    </body>
-</html>
+</body></html>
